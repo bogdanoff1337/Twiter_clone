@@ -1,0 +1,46 @@
+$twitter-color: #235596;
+$twitter-background: #e6ecf0;
+.sidebar_tweet {
+  background-color: $twitter-color;
+  border: none;
+  color: #fff;
+  font-weight: 700;
+  text-transform: inherit;
+  border-radius: 30px;
+  height: 50px;
+  width: 100%;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.sidebar {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+
+  ul li {
+    text-decoration: none;
+    padding: 15px 60px;
+    color: #000;
+    font-weight: 700;
+    font-size: 19px;
+    align-items: center;
+    display: flex;
+
+    i {
+      font-size: 24px;
+      width: 25px;
+    }
+
+    span {
+      margin-left: 15px;
+    }
+  }
+}
+
+.active_menu {
+  i,
+  apsn {
+    color: $twitter-color;
+  }
+}

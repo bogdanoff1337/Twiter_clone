@@ -1,0 +1,171 @@
+$twitter-color: #235596;
+$twitter-background: #e6ecf0;
+$border-botom: 1px solid $twitter-background;
+.right_sidebar {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.search-container {
+  background-color: $twitter-color;
+
+  border-radius: 30px;
+  padding: 10px;
+  margin: 5px auto;
+  width: 80%;
+  cursor: pointer;
+  border: $border-botom;
+}
+
+.search-container,
+.search-input {
+  border: none;
+  outline: none;
+  font-weight: 500;
+  font-size: 16px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.search-container,
+.search-btn .fa {
+  color: rgb(101, 119, 134);
+  font-size: 16px;
+  margin-right: 5px;
+}
+
+.trends_box {
+  background-color: rgb(245, 248, 250);
+  border-radius: 15px;
+  margin: 15px auto;
+  width: 80%;
+  cursor: pointer;
+}
+
+.trends_header {
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid #e0e5e9;
+  padding: 15px 15px 10px;
+}
+
+.trend {
+  border-bottom: 1px solid #e0e5e9;
+  padding: 15px;
+}
+
+.trend:hover,
+.trends_show-more:hover {
+  background-color: rgb(231, 233, 235);
+}
+
+.trends_show-more {
+  padding: 15px;
+}
+
+.trends_show-more a {
+  color: $twitter-color;
+}
+
+.trends_show-more:hover {
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.trends_body span {
+  font-size: 14px;
+  color: rgb(101, 119, 134);
+}
+
+.trends_body p {
+  font-weight: 700;
+}
+.trends_header p {
+  width: 100%;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.trends_header .fa-cog {
+  color: $twitter-color;
+}
+.button_sw {
+  margin-top: 25px;
+  margin-left: 105px;
+  padding: 15px 25px;
+  border-radius: 50px;
+  background: $twitter-color;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  border: 1px solid black;
+  border-radius: 10px;
+  z-index: 10;
+  background-color: white;
+  width: 500px;
+  max-width: 80%;
+}
+
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+
+.modal-header .title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.modal-header .close-button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.modal-body {
+  padding: 10px 15px;
+}
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}

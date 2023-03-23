@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap");
+$twitter-color: #235596;
+$twitter-background: #e6ecf0;
+$border-botom: 1px solid $twitter-background;
+body {
+  background: $twitter-background;
+  font-family: "Roboto", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+textarea {
+  margin: none;
+  outline: none;
+  width: 100%;
+  border: none;
+  border-bottom: $border-botom;
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+}
+.fa-twitter {
+  color: $twitter-color;
+  font-size: 30 !important;
+}
+
+.sidebar,
+.main {
+  border-right: $border-botom;
+}
+.grid-container {
+  width: 100%;
+  max-width: 1350px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.8fr 1.4fr 1.1fr;
+  grid-template-rows: 0.8fr 1.5fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "sidebar main right_sidebar ."
+    "sidebar main right_sidebar ."
+    "sidebar main right_sidebar .";
+}
+.sidebar {
+  grid-area: sidebar;
+}
+.main {
+  grid-area: main;
+}
+.right_sidebar {
+  grid-area: right_sidebar;
+}
+
+.page_title {
+  font-weight: 900;
+  font-size: 20px;
+  padding: 15px 20px;
+  border-bottom: $border-botom;
+
+  position: sticky;
+  top: 0;
+  z-index: 900;
+}
+
+.dropbtn {
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+}
+
+.dropdawn {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdawn i,
+.dropdawn-content span {
+  color: red;
+}
+
+.dropdawn-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdawn-content a:hover {
+  background-color: #e6e6e6;
+}
+
+.dropdawn:hover .dropdawn-content {
+  display: block;
+}
+
+@media screen and (max-width: 996px) {
+  .sidebar ul li {
+    text-align: center;
+    padding: 10px 10px;
+    display: block;
+  }
+  .sidebar ul li span,
+  .sidebar_tweet,
+  .right_sidebar {
+    display: none;
+  }
+  .grid-container {
+    grid-template-columns: 0.3fr 1.7fr;
+    max-width: 700px;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "sidebar main ." "sidebar main";
+  }
+  .sidebar {
+    grid-area: sidebar;
+  }
+  .main {
+    grid-area: main;
+  }
+}
+.updata {
+  font-size: 24px;
+  margin: 25px;
+  width: 350px;
+  height: 200px;
+  outline: dashed 1px black;
+
+  position: relative;
+}
+
+.updata_body {
+  padding: 20px 15px 20px 0;
+  border-bottom: $boeder-botom;
+  display: flex;
+  top: 50%;
+  left: 30%;
+}

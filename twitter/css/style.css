@@ -1,0 +1,133 @@
+:root {
+  color: #220d9b;
+  background: #e6ecf0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+textarea {
+  margin: none;
+  outline: none;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid var(--twitter-background);
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+}
+
+.fa-twitter {
+  color: var(--twitter-color);
+  font-size: 30;
+}
+
+.sidebar,
+.main {
+  border-right: 1px solid var(--twitter-background);
+}
+
+.grid-container {
+  width: 100%;
+  max-width: 1350px;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 0.8fr 0px 1.4fr 0px 1.1fr;
+  grid-template-columns: 0.8fr 1.4fr 1.1fr;
+  -ms-grid-rows: 0.8fr 0px 1.5fr 0px 1fr;
+  grid-template-rows: 0.8fr 1.5fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "sidebar main right_sidebar ." "sidebar main right_sidebar ." "sidebar main right_sidebar .";
+}
+
+.page_title {
+  font-weight: 900;
+  font-size: 20px;
+  padding: 15px 20px;
+  border-bottom: 1px solid var(--twitter-background);
+  position: sticky;
+  top: 0;
+  z-index: 900;
+}
+
+.dropbtn {
+  color: #ffffff;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+}
+
+.dropdawn {
+  position: relative;
+  display: inline-block;
+}
+.dropdawn i,
+.dropdawn-content span {
+  color: red;
+}
+.dropdawn-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 160px;
+  -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.dropdawn-content a:hover {
+  background-color: #e6e6e6;
+}
+.dropdawn:hover .dropdawn-content {
+  display: block;
+}
+
+@media screen and (max-width: 996px) {
+  .my-selector {
+    text-align: center;
+    padding: 10px 10px;
+    display: block;
+  }
+}
+
+.sidebar ul li span,
+.sidebar_tweet,
+.right_sidebar {
+  display: none;
+}
+
+.grid-container {
+  -ms-grid-columns: 0.3fr 1.7fr;
+  grid-template-columns: 0.3fr 1.7fr;
+  max-width: 700px;
+  -ms-grid-rows: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "sidebar main ." "sidebar main";
+}
+
+.updata {
+  font-size: 24px;
+  margin: 25px;
+  width: 350px;
+  height: 200px;
+  outline: dashed 1px black;
+  position: relative;
+}
+.updata_body {
+  padding: 20px 15px 20px 0;
+  border-bottom: 1px solid var(--twitter-background);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  top: 50%;
+  left: 30%;
+}
