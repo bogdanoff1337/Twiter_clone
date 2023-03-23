@@ -34,7 +34,7 @@
           <button data-close-button class="close-button">&times;</button>
         </div>
         <div class="modal-body">
-          Update: сайт оптимізовано за допомогою SCSS.
+          Update: сайт оптимізовано за допомогою SCSS.Та функцію лайку твіту.
         </div>
       </div>
       <div id="overlay"></div>
